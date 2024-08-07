@@ -11,6 +11,11 @@
     ansible.builtin.apt:
       name: tree
 
+  - name: Remove tree
+    ansible.builtin.apt:
+      name: tree
+      state: absent
+
   - name: Stop service
     ansible.builtin.service:
       name: apache2
